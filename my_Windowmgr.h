@@ -9,18 +9,18 @@ class Window_mgr
 {
 	Window_mgr()
 	{
-		screens.push_back(Screen(3, 10, 'a'));
+		screens.push_back(Screen(3, 10, 'a')); 	//如果改成screens{Screen(3, 10, 'a')}就会报错
 	}
 	Window_mgr(char a)
 	{
-		screens{Screen(3, 10, a)};
+		screens{Screen(3, 10, a)};		//如果改成screens{Screen(3, 10, 'a')}就会报错
 	}
 public:
 	typedef vector<Screen>::size_type ScreenIndex;
 	void clear(ScreenIndex);
 	unsigned char addScreen(const Screen&);
 private:
-	vector<Screen> screens;
+	vector<Screen> screens;				//如果改成screens{Screen(3, 10, 'a')}就会报错
 };
 void Window_mgr::clear(ScreenIndex i)
 {
